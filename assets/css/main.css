@@ -2547,50 +2547,50 @@ input, select, textarea {
 		position: relative;
 	}
 
-		.image img {
-			border-radius: 0.25em;
-			display: block;
-		}
+	.image img {
+		border-radius: 0.25em;
+		display: block;
+	}
 
-		.image.left, .image.right {
-			max-width: 40%;
-		}
+	.image.left, .image.right {
+		max-width: 40%;
+	}
 
-			.image.left img, .image.right img {
-				width: 100%;
-			}
+	.image.left img, .image.right img {
+		width: 100%;
+	}
 
-		.image.left {
-			float: left;
-			margin: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
+	.image.left {
+		float: left;
+		margin: 0 1.5em 1em 0;
+		top: 0.25em;
+	}
 
-		.image.right {
-			float: right;
-			margin: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
+	.image.right {
+		float: right;
+		margin: 0 0 1em 1.5em;
+		top: 0.25em;
+	}
 
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
-		}
+	.image.fit {
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
 
-			.image.fit img {
-				width: 100%;
-			}
+	.image.fit img {
+		width: 100%;
+	}
 
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
-		}
+	.image.main {
+		display: block;
+		margin: 0 0 3em 0;
+		width: 100%;
+	}
 
-			.image.main img {
-				width: 100%;
-			}
+	.image.main img {
+		width: 100%;
+	}
 
 /* List */
 
