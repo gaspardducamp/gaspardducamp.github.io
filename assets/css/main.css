@@ -3221,7 +3221,7 @@ input, select, textarea {
 
 			}
 
-		.wrapper.alt {
+		/*.wrapper.alt {
 			background-color: #261c3e;
 		}
 
@@ -3241,6 +3241,38 @@ input, select, textarea {
 			background-color: #3e4094;
 		}
 
+		.wrapper.style3 {
+			background-color: #b74e91;
+		}
+
+		.wrapper.style3-alt {
+			background-color: #953d75;
+		}*/
+
+		.wrapper.alt {
+			background-color: #261c3e;
+		}
+
+		/* intro */
+		.wrapper.style1 {
+			background-color: #5e42a6;
+		}
+
+		/* about me */
+		.wrapper.style1-alt {
+			background-color: #493382;
+		}
+
+		/* r&d */
+		.wrapper.style2 {
+			background-color: #5052b5;
+		}
+
+		.wrapper.style2-alt {
+			background-color: #3e4094;
+		}
+
+		/* pub teaching misc */
 		.wrapper.style3 {
 			background-color: #b74e91;
 		}
