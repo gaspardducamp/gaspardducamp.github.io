@@ -1,185 +1,223 @@
 ///
-/// Hyperspace by HTML5 UP
+/// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
 /* Sidebar */
 
+	#search {
+		form {
+			@include icon(false, solid);
+			position: relative;
+
+			&:before {
+				@include vendor('transform', 'scaleX(-1)');
+				color: _palette(fg);
+				content: '\f002';
+				cursor: default;
+				display: block;
+				font-size: 1.5em;
+				height: _size(element-height) / 1.375;
+				line-height: _size(element-height) / 1.375;
+				opacity: 0.325;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+				width: _size(element-height) / 1.375;
+			}
+
+			input[type="text"] {
+				padding-right: _size(element-height);
+			}
+		}
+	}
+
 	#sidebar {
-		@include padding(2.5em, 2.5em);
-		background: _palette(bg);
-		cursor: default;
-		height: 100vh;
-		left: 0;
-		overflow-x: hidden;
-		overflow-y: auto;
-		position: fixed;
-		text-align: right;
-		top: 0;
+		$pad: 2em / 0.9;
+
+		@include vendor('flex-grow', '0');
+		@include vendor('flex-shrink', '0');
+		@include vendor('transition', (
+			'margin-left 0.5s ease',
+			'box-shadow 0.5s ease'
+		));
+		background-color: _palette(bg-alt);
+		font-size: 0.9em;
+		position: relative;
 		width: _size(sidebar-width);
-		z-index: _misc(z-index-base);
+
+		h2 {
+			font-size: (1.25em / 0.9);
+		}
 
 		> .inner {
-			@include vendor('display', 'flex');
-			@include vendor('flex-direction', 'column');
-			@include vendor('justify-content', 'center');
-			@include vendor('transform', 'translateY(0)');
-			@include vendor('transition', (
-				'opacity #{_duration(activation)} ease',
-			));
-			min-height: 100%;
-			opacity: 1;
-			width: 100%;
+			@include padding($pad, $pad, (0, 0, $pad, 0));
+			position: relative;
+			width: _size(sidebar-width);
 
-			body.is-ie & {
-				height: 100%;
+			> * {
+				border-bottom: solid 2px _palette(border);
+				margin: 0 0 (_size(element-margin) * 1.75) 0;
+				padding: 0 0 (_size(element-margin) * 1.75) 0;
+
+				> :last-child {
+					margin-bottom: 0;
+				}
+
+				&:last-child {
+					border-bottom: 0;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
+
+			> .alt {
+				background-color: darken(_palette(bg-alt), 2);
+				border-bottom: 0;
+				margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
+				padding: $pad;
+				width: calc(100% + #{$pad * 2});
 			}
 		}
 
-		nav {
-			> ul {
-				list-style: none;
-				padding: 0;
+		.toggle {
+			@include icon(false, solid);
+			@include vendor('transition', 'left 0.5s ease');
+			-webkit-tap-highlight-color: rgba(255,255,255,0);
+			border: 0;
+			display: block;
+			height: 7.5em;
+			left: _size(sidebar-width);
+			line-height: 7.5em;
+			outline: 0;
+			overflow: hidden;
+			position: absolute;
+			text-align: center;
+			text-indent: -15em;
+			white-space: nowrap;
+			top: 0;
+			width: 6em;
+			z-index: _misc(z-index-base);
 
-				> li {
-					@include vendor('transform', 'translateY(0)');
-					@include vendor('transition', (
-						'opacity #{_duration(activation) * 0.15} ease',
-						'transform #{_duration(activation) * 0.75} ease'
-					));
-					margin: 1.5em 0 0 0;
-					opacity: 1;
-					padding: 0;
-					position: relative;
+			&:before {
+				content: '\f0c9';
+				font-size: 2rem;
+				height: inherit;
+				left: 0;
+				line-height: inherit;
+				position: absolute;
+				text-indent: 0;
+				top: 0;
+				width: inherit;
+			}
+		}
 
-					&:first-child {
-						margin: 0;
-					}
+		&.inactive {
+			margin-left: (_size(sidebar-width) * -1);
+		}
 
-					@for $i from 1 through _misc(max-sidebar-links) {
-						&:nth-child(#{$i}) {
-							@include vendor('transition-delay', '#{(_duration(activation) * 0.2 * $i) + (_duration(activation) * 0.25)}');
-						}
-					}
+		@include breakpoint('<=xlarge') {
+			$pad: 1.5em / 0.9;
+
+			width: _size(sidebar-width-alt);
+
+			> .inner {
+				@include padding($pad, $pad, (0, 0, $pad, 0));
+				width: _size(sidebar-width-alt);
+
+				> .alt {
+					margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
+					padding: $pad;
+					width: calc(100% + #{$pad * 2});
 				}
 			}
 
-			a {
-				@include vendor('transition', 'color #{_duration(transition)} ease');
-				border: 0;
-				color: _palette(fg-light);
-				display: block;
-				font-size: 0.6em;
-				font-weight: _font(weight-bold);
-				letter-spacing: _font(kerning-alt);
-				line-height: 1.75;
-				outline: 0;
-				padding: 1.35em 0;
-				position: relative;
-				text-decoration: none;
-				text-transform: uppercase;
-
-				&:before,
-				&:after {
-					border-radius: 0.2em;
-					bottom: 0;
-					content: '';
-					height: 0.2em;
-					position: absolute;
-					right: 0;
-					width: 100%;
-				}
+			.toggle {
+				height: 6.25em;
+				left: _size(sidebar-width-alt);
+				line-height: 6.25em;
+				text-indent: 5em;
+				width: 5em;
 
 				&:before {
-					background: lighten(_palette(bg), 5);
-				}
-
-				&:after {
-					@include vendor('background-image', 'linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)})');
-					@include vendor('transition', 'max-width #{_duration(transition)} ease');
-					max-width: 0;
-				}
-
-				&:hover {
-					color: _palette(fg);
-				}
-
-				&.active {
-					color: _palette(fg-bold);
-
-					&:after {
-						max-width: 100%;
-					}
+					font-size: 1.5rem;
 				}
 			}
-		}
 
-		body.is-preload & {
-			> .inner {
-				opacity: 0;
-			}
-
-			nav {
-				ul {
-					li {
-						@include vendor('transform', 'translateY(2em)');
-						opacity: 0;
-					}
-				}
+			&.inactive {
+				margin-left: (_size(sidebar-width-alt) * -1);
 			}
 		}
 
 		@include breakpoint('<=large') {
-			height: _size(sidebar-height);
+			box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+			height: 100%;
 			left: 0;
-			line-height: _size(sidebar-height);
-			overflow: hidden;
-			padding: 0;
-			text-align: center;
+			position: fixed;
 			top: 0;
-			width: 100%;
+			z-index: _misc(z-index-base);
 
-			> .inner {
-				@include vendor('flex-direction', 'row');
-				@include vendor('align-items', 'stretch');
-				height: inherit;
-				line-height: inherit;
+			&.inactive {
+				box-shadow: none;
 			}
 
-			nav {
-				height: inherit;
-				line-height: inherit;
+			> .inner {
+				-webkit-overflow-scrolling: touch;
+				height: 100%;
+				left: 0;
+				overflow-x: hidden;
+				overflow-y: auto;
+				position: absolute;
+				top: 0;
 
-				ul {
-					@include vendor('display', 'flex');
-					height: inherit;
-					line-height: inherit;
-					margin: 0;
-
-					li {
-						display: block;
-						height: inherit;
-						line-height: inherit;
-						margin: 0 0 0 2em;
-						padding: 0;
-					}
+				&:after {
+					content: '';
+					display: block;
+					height: 4em;
+					width: 100%;
 				}
+			}
 
-				a {
-					height: inherit;
-					line-height: inherit;
-					padding: 0;
+			.toggle {
+				text-indent: 6em;
+				width: 6em;
 
-					&:after {
-						background-image: none;
-						background-color: _palette(accent3);
-					}
+				&:before {
+					font-size: 1.5rem;
+					margin-left: (-0.875em / 2);
 				}
+			}
+
+			body.is-preload & {
+				display: none;
 			}
 		}
 
 		@include breakpoint('<=small') {
-			display: none;
+			.toggle {
+				text-indent: 7.25em;
+				width: 7.25em;
+
+				&:before {
+					color: _palette(fg);
+					margin-left: (-0.125em / 2);
+					margin-top: (-0.5em / 2);
+					font-size: 1.1rem;
+					z-index: 1;
+				}
+
+				&:after {
+					background: transparentize(lighten(_palette(fg), 35), 0.25);
+					border-radius: _size(border-radius);
+					content: '';
+					height: 3.5em;
+					left: 1em;
+					position: absolute;
+					top: 1em;
+					width: 5em;
+				}
+			}
 		}
 	}

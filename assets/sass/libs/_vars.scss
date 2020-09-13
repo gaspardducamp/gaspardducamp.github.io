@@ -1,49 +1,44 @@
 // Misc.
 	$misc: (
-		z-index-base:		10000,
-		max-features:		20,
-		max-sidebar-links:	20
+		z-index-base:		10000
 	);
 
 // Duration.
 	$duration: (
-		transition:			0.2s,
-		activation:			1s
+		nav:				0.5s,
+		transition:			0.2s
 	);
 
 // Size.
 	$size: (
-		border-radius:		0.25em,
-		border-width:		1px,
+		border-radius:		0.375em,
 		element-height:		2.75em,
 		element-margin:		2em,
-		sidebar-width:		18em,
-		sidebar-height:		3.5em,	// when <=large is active
-		inner-width:		75em
+		sidebar-width:		26em,
+		sidebar-width-alt:	24em,
+		gutter:				3em
 	);
 
 // Font.
 	$font: (
-		family:				(Arial, Helvetica, sans-serif),
+		family:				('Open Sans', sans-serif),
+		family-heading:		('Roboto Slab', serif),
 		family-fixed:		('Courier New', monospace),
-		weight:				normal,
-		weight-bold:		bold,
-		kerning-alt:		0.25em
+		weight:				400,
+		weight-bold:		600,
+		weight-heading:		700,
+		weight-heading-alt:	400,
+		kerning-heading:	0.075em
 	);
 
 // Palette.
 	$palette: (
-		bg:					#312450,
-		bg-alt:				darken(#312450, 5),
-		fg:					rgba(255,255,255,0.55),
-		fg-bold:			#ffffff,
-		fg-light:			rgba(255,255,255,0.35),
-		border:				rgba(255,255,255,0.15),
-		border-bg:			rgba(255,255,255,0.05),
-		accent1:			#5e42a6,
-		accent1-alt:		darken(#5e42a6, 10),
-		accent2:			#5052b5,
-		accent2-alt:		darken(#5052b5, 10),
-		accent3:			#b74e91,
-		accent3-alt:		darken(#b74e91, 10)
+		bg:					#ffffff,
+		bg-alt:				#f5f6f7,
+		fg:					#7f888f,
+		fg-bold:			#3d4449,
+		fg-light:			#9fa3a6,
+		border:				rgba(210,215,217,0.75),
+		border-bg:			transparentize(#e6ebed, 0.75),
+		accent:				#f56a6a
 	);

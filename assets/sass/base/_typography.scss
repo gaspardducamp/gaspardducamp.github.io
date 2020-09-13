@@ -1,5 +1,5 @@
 ///
-/// Hyperspace by HTML5 UP
+/// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -9,35 +9,39 @@
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 16.5pt;
+		font-size: 13pt;
 		font-weight: _font(weight);
-		line-height: 1.75;
+		line-height: 1.65;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 13pt;
+			font-size: 11pt;
 		}
 
 		@include breakpoint('<=large') {
-			font-size: 12pt;
+			font-size: 10pt;
 		}
 
 		@include breakpoint('<=xxsmall') {
-			font-size: 11pt;
+			font-size: 9pt;
 		}
 	}
 
 	a {
 		@include vendor('transition', (
-			'color #{_duration(transition)} ease',
-			'border-bottom-color #{_duration(transition)} ease'
+			'color #{_duration(transition)} ease-in-out',
+			'border-bottom-color #{_duration(transition)} ease-in-out'
 		));
-		border-bottom: dotted 1px _palette(fg-light);
-		color: inherit;
+		border-bottom: dotted 1px;
+		color: _palette(accent);
 		text-decoration: none;
 
 		&:hover {
-			border-bottom-color: transparent;
-			color: _palette(fg-bold);
+			border-bottom-color: _palette(accent);
+			color: _palette(accent) !important;
+
+			strong {
+				color: inherit;
+			}
 		}
 	}
 
@@ -56,36 +60,22 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
+		font-family: _font(family-heading);
+		font-weight: _font(weight-heading);
 		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.25) 0;
+		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
 		a {
 			color: inherit;
 			text-decoration: none;
+			border-bottom: 0;
 		}
 	}
 
 	h1 {
-		font-size: 2.75em;
-
-		&.major {
-			margin: 0 0 (_size(element-margin) * 0.65) 0;
-			position: relative;
-			padding-bottom: 0.35em;
-
-			&:after {
-				@include vendor('background-image', 'linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)})');
-				@include vendor('transition', 'max-width #{_duration(transition)} ease');
-				border-radius: 0.2em;
-				bottom: 0;
-				content: '';
-				height: 0.05em;
-				position: absolute;
-				right: 0;
-				width: 100%;
-			}
-		}
+		font-size: 4em;
+		margin: 0 0 (_size(element-margin) * 0.25) 0;
+		line-height: 1.3;
 	}
 
 	h2 {
@@ -93,44 +83,41 @@
 	}
 
 	h3 {
-		font-size: 1.1em;
+		font-size: 1.25em;
 	}
 
 	h4 {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	h5 {
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
 
 	h6 {
-		font-size: 0.6em;
+		font-size: 0.7em;
+	}
+
+	@include breakpoint('<=xlarge') {
+		h1 {
+			font-size: 3.5em;
+		}
+	}
+
+	@include breakpoint('<=medium') {
+		h1 {
+			font-size: 3.25em;
+		}
 	}
 
 	@include breakpoint('<=small') {
 		h1 {
 			font-size: 2em;
+			line-height: 1.4;
 		}
 
 		h2 {
-			font-size: 1.25em;
-		}
-
-		h3 {
-			font-size: 1em;
-		}
-
-		h4 {
-			font-size: 0.8em;
-		}
-
-		h5 {
-			font-size: 0.6em;
-		}
-
-		h6 {
-			font-size: 0.6em;
+			font-size: 1.5em;
 		}
 	}
 
@@ -147,7 +134,7 @@
 	}
 
 	blockquote {
-		border-left: solid (_size(border-width) * 4) _palette(border);
+		border-left: solid 3px _palette(border);
 		font-style: italic;
 		margin: 0 0 _size(element-margin) 0;
 		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
@@ -156,7 +143,7 @@
 	code {
 		background: _palette(border-bg);
 		border-radius: _size(border-radius);
-		border: solid _size(border-width) _palette(border);
+		border: solid 1px _palette(border);
 		font-family: _font(family-fixed);
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -171,7 +158,7 @@
 
 		code {
 			display: block;
-			line-height: 1.75em;
+			line-height: 1.75;
 			padding: 1em 1.5em;
 			overflow-x: auto;
 		}
@@ -179,7 +166,7 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid _size(border-width) _palette(border);
+		border-bottom: solid 1px _palette(border);
 		margin: _size(element-margin) 0;
 
 		&.major {
