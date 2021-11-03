@@ -1,0 +1,31 @@
+a {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+  }
+  nav, scroll-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  nav {
+    width: auto;
+    height: 50px;
+    border: 1px solid black;
+  }
+  scroll-container {
+    display: block;
+    width: auto;
+    height: 300px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /*height: max-content;*/
+    font-size: 5em;
+  }
+  
