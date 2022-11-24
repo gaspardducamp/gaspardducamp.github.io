@@ -1,33 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <title>Gaspard Ducamp</title>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#moodboard">Moodboard</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!--
+            <a class="logo" href="#">Gaspard Ducamp</a>
+        </header>
 
-Follow me on
-Dribbble: https://dribbble.com/supahfunk
-Twitter: https://twitter.com/supahfunk
-Codepen: https://codepen.io/supah/
+        <div id="homescreen">
+            <img src="images/relax.jpg" alt="homescreen"/>
+        </div>
 
--->
-<div id="scroll">
-  <div class="item"><span>Gaspard Ducamp, PhD</span></div>
-  <div class="item"><a href='https://www.GitLab.com/Aspard' target="_blank">GitLab</a></div>
-  <div class="item"><a href='https://www.linkedin.com/in/ducampgaspard/' target="_blank">LinkedIn</a></div>
-  <div class="item"><a href='https://www.instagram.com/ducampgaspard/' target="_blank">Instagram</a></div>
-  <div class="item"><a href='https://twitter.com/GaspardDucamp' target="_blank">Twitter</a></div>
-</div>
-<!-- partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://thekenwheeler.herokuapp.com/scripts/browserSwipe.js'></script>
-<script src='https://thekenwheeler.herokuapp.com/scripts/touchswipe.js'></script><script  src="./script.js"></script>
+        <div class="container">
+            <div id="about">
+                <p>
+                    PhD in Computer Science with expertise in the use of Bayesian inference, PGMs, advance low-level tensor methods and a wide
+                    range of machine learnings tools, from decision trees to advanced deep learning techniques. Curious and eager to learn, I
+                    am looking for an opportunity to build a challenging career in data science and apply my skills in an innovative setting to
+                    real-world problems.
+                </p>
+            </div>
+            
+            <div id="projects">
+                <div class="cards">
+                    <div class="card">
+                        <div class="content">
+                            <div class="img-box">
+                                <img src="images/marin.svg" alt="MARIN">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="card-title">MARIN</h3>
+                                <span class="card-date">december 2022 - present</span><br><br>
+                                <span class="card-job">Data Scientist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="breaker"></p>
+                    
+                    <div class="card">
+                        <div class="content">
+                            <div class="img-box">
+                                <img src="images/wisear.svg" alt="Wisear" style="height:70px;">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="card-title">Wisear</h3>
+                                <span class="card-date">january - september 2022</span><br><br>
+                                <span class="card-job">Machine Learning Scientist</span>
+                            </div>
+                        </div>
+                        <!-- <div class="card-more">
+                            <ul>
+                                <li>
+                                    Keep up to date with the latest advances of brain-computer interface literature and leverage scientific partnerships
+                                </li>
+                                <li>
+                                    Design data collection campaigns in order to build internal datasets
+                                </li>
+                                <li>
+                                    Explore the implementations of machine learning techniques (signal processing) and neural networks (CNNs, TCNs) for both existing and future products
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <p class="breaker"></p>
+                    
+                    <div class="card">
+                        <div class="content">
+                            <div class="img-box">
+                                <img src="images/agrum.png" alt="aGrUM" style="height:80px;">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="card-title">aGrUM</h3>
+                                <span class="card-date">april 2019 - present</span><br><br>
+                                <span class="card-job">Main Maintainer</span>
+                            </div>
+                        </div>
+                        <!-- 
+                        <div class="card-more">
+                            <ul>
+                                <il>
+                                    Testing, packaging and distribution of pyAgrum, aGrUM's python wrapper
+                                </il>
+                                <il>
+                                    Implementation of new machine learning algorithms
+                                </il>
+                                <il>
+                                    Communication in international conferences and workshops
+                                </il>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <p class="breaker"></p>
+                    
+                    <div class="card">
+                        <div class="content">
+                            <div class="img-box">
+                                <img src="images/IBM_logo.svg" alt="IBM">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="card-title">IBM</h3>
+                                <span class="card-date">January 2017 - May 2021</span><br><br>
+                                <span class="card-job">PhD Student</span>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="card-more">           
+                            <ul>
+                                <li>
+                                    State of the art on uncertain reasoning in business rules and tensor format
+                                </li>
+                                <li>
+                                    Extension of the compilation chain of an industrial rule engine
+                                </li>
+                                <li>
+                                    State of the art on uncertain reasoning in business rules and tensor format
+                                </li>
+                                <li>
+                                    State of the art on uncertain reasoning in business rules and tensor format
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <p class="breaker"></p>
+                </div>
+            </div>
+            
+            <div id="publications">
+                
+                <ul id="pubs">
+                    <li class="year">
+                        <span class="year_number">2021</span>
+                        <ul>
+                        <li><span class="auteurs">G.&nbsp;Ducamp</span>&nbsp;: “<a href="https://www.theses.fr/en/2021SORUS090">Probabilistic Rules Compilation and Optimisation</a>”, PhD thesis, defence 04/13/2021, supervision Gonzales, Christophe, co-supervision : Wuillemin, Pierre-Henri (2021)</li>
+                        </ul>
+                    </li>
+                    <li class="year">
+                        <span class="year_number">2020</span>
+                            <ul>
+                            <li><span class="authors">G.&nbsp;Ducamp, Ch.&nbsp;Gonzales, P.‑H.&nbsp;Wuillemin</span>&nbsp;: “<a href="https://hal.archives-ouvertes.fr/hal-03135721">aGrUM/pyAgrum : a toolbox to build models and algorithms for Probabilistic Graphical Models in Python</a>”, 10<sup>th</sup> International Conference on Probabilistic Graphical Models, vol.&nbsp;138, Proceedings of Machine Learning Research, Skørping, Denmark, pp.&nbsp;609-612 (2020)</li>
+                            <li><span class="authors">G.&nbsp;Ducamp, Ph.&nbsp;Bonnard, A.&nbsp;Nouy, P.‑H.&nbsp;Wuillemin</span>&nbsp;: “<a href="https://hal.archives-ouvertes.fr/hal-03135705">An Efficient Low-Rank Tensors Representation for Algorithms in Complex Probabilistic Graphical Models</a>”, 10<sup>th</sup> International Conference on Probabilistic Graphical Models, vol.&nbsp;138, Proceedings of Machine Learning Research, Skørping, Denmark, pp.&nbsp;173-184 (2020)</li>
+                            <li><span class="authors">G.&nbsp;Ducamp, Ph.&nbsp;Bonnard, Ch.&nbsp;De Sainte Marie, P.‑H.&nbsp;Wuillemin</span>&nbsp;: “<a href="https://hal.archives-ouvertes.fr/hal-02911619">Advanced Syntax and Compilation for Probabilistic Production Rules with PRM</a>”, 14<sup>th</sup> International Rule Challenge, 4<sup>th</sup> Doctoral Consortium, and 6<sup>th</sup> Industry Track, vol.&nbsp;2644, Proceedings of the 14<sup>th</sup> International Rule Challenge, 4<sup>th</sup> Doctoral Consortium, and 6<sup>th</sup> Industry Track, Oslo, Norway, pp.&nbsp;103-110 (2020)</li>
+                            <li><span class="authors">G.&nbsp;Ducamp, Ph.&nbsp;Bonnard, P.‑H.&nbsp;Wuillemin</span>&nbsp;: “<a href="https://hal.archives-ouvertes.fr/hal-02612521">Uncertain Reasoning in Rule-Based Systems Using PRM</a>”, FLAIRS 33 - 33<sup>rd</sup> Florida Artificial Intelligence Research Society Conference, Miami, United States, pp.&nbsp;617-620, (AAAI) (2020)</li>
+                            </ul>
+                    </li>
+                    <li class="year">
+                        <span class="year_number">2018</span>
+                            <ul>
+                            <li><span class="authors">G.&nbsp;Ducamp, Ph.&nbsp;Bonnard, Ch.&nbsp;De Sainte Marie, Ch.&nbsp;Gonzales, P.‑H.&nbsp;Wuillemin</span>&nbsp;: “<a href="https://hal.archives-ouvertes.fr/hal-01974983">Improving Probabilistic Rules Compilation using PRM</a>”, RuleML+RR Doctoral Consortium 2018 (2<sup>nd</sup> International Joint Conference on Rules and Reasoning ), Esch-sur-Alzette, Luxembourg (2018)</li>
+                            <li><span class="authors">G.&nbsp;Ducamp, Ph.&nbsp;Bonnard, Ch.&nbsp;De Sainte Marie, Ch.&nbsp;Gonzales, P.‑H.&nbsp;Wuillemin</span>&nbsp;: “<a href="https://hal.archives-ouvertes.fr/hal-01974967">Optimisation de la compilation de règles métier probabilistes à l’aide de PRM</a>”, 9<sup>e</sup>s Journées Francophones sur les Réseaux Bayésiens et les Modèles Graphiques Probabilistes (JFRB 2018), Toulouse, France (2018)</li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>        
+            
+            <div id="moodboard">
+                <p>
+                    Quisque sit amet arcu eu mi commodo sollicitudin eget at nunc. Nullam ullamcorper nisi ultricies massa dapibus, ut sodales arcu varius. Vestibulum at velit eget eros maximus iaculis ut vel sem. Ut quis rhoncus nunc, non maximus dolor. Morbi nec dui venenatis, commodo leo eu, mattis felis. Nunc diam odio, auctor eu laoreet vel, tempor vitae augue. Proin a ornare urna. Nulla facilisis, est vel placerat semper, purus ligula pulvinar diam, ac sollicitudin libero leo vel diam. Ut congue tellus id convallis dapibus. Nunc at neque ut massa vulputate viverra euismod nec est. Morbi sagittis posuere venenatis. Sed tristique diam at varius consectetur. 
+                </p>
+            </div>
 
-</body>
+            <div id="contact">
+                <p>
+                    Quisque sit amet arcu eu mi commodo sollicitudin eget at nunc. Nullam ullamcorper nisi ultricies massa dapibus, ut sodales arcu varius. Vestibulum at velit eget eros maximus iaculis ut vel sem. Ut quis rhoncus nunc, non maximus dolor. Morbi nec dui venenatis, commodo leo eu, mattis felis. Nunc diam odio, auctor eu laoreet vel, tempor vitae augue. Proin a ornare urna. Nulla facilisis, est vel placerat semper, purus ligula pulvinar diam, ac sollicitudin libero leo vel diam. Ut congue tellus id convallis dapibus. Nunc at neque ut massa vulputate viverra euismod nec est. Morbi sagittis posuere venenatis. Sed tristique diam at varius consectetur. 
+                </p>
+            </div>
+        </div>
+    </body>
 </html>

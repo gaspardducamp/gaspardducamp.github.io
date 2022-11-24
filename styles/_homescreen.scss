@@ -1,0 +1,18 @@
+#homescreen{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media (orientation: portrait) {
+        img {
+            height: 100%;
+        }
+    }
+
+    @media (orientation: landscape) {
+        img {
+            width:100%;
+        }
+    }
+}
