@@ -19,9 +19,9 @@ html, body {
 .container {
     @include flexCenter();
 
-    >* {
+    > div {
         width: 70%;
-        padding-top: 30vh;
+        height: 100vh;
     }
     
     p {
@@ -59,13 +59,29 @@ html, body {
 
 @media screen and (max-width: 1024px) {
     .container {
-        >* {
+        > div {
             width: 90%;
-            padding-top: 30vh;
+            //height: 100%;
+            //margin: 200px 0 200px 0;
+        }
+
+        #about, #projects, #publications, #moodboard, #contact {
+            //position: relative;
+            //top: 200px;
+            overflow: auto;
         }
 
         #publications {
-            font-size: 2vh;
+            font-size: 1.5vh;
+
+            .year ul {
+                padding-left: 0px;
+                list-style-type: none;
+                
+                li {
+                    margin: 20px 0 20px 0;
+                }
+            }
         }
     }
 }

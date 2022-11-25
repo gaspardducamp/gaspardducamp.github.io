@@ -26,6 +26,9 @@ header ul li > a {
   text-decoration: none;
   font-size: 1em;
 }
+header ul li > a br {
+  display: none;
+}
 header .logo {
   color: black;
   flex: 1;
@@ -33,7 +36,6 @@ header .logo {
   justify-content: flex-end;
   font-family: Times;
   font-size: 1.5em;
-  letter-spacing: -1px;
   text-decoration: none;
   padding-right: 40px;
   height: 30px;
@@ -53,6 +55,9 @@ header .logo #logo-short {
   }
   header ul li > a {
     font-size: 1em;
+  }
+  header ul li > a br {
+    display: inline;
   }
   header .logo {
     font-size: 2em;
@@ -177,9 +182,9 @@ html, body {
   flex-direction: column;
   align-items: center;
 }
-.container > * {
+.container > div {
   width: 70%;
-  padding-top: 30vh;
+  height: 100vh;
 }
 .container p {
   font-size: 20px;
@@ -208,11 +213,20 @@ html, body {
 }
 
 @media screen and (max-width: 1024px) {
-  .container > * {
+  .container > div {
     width: 90%;
-    padding-top: 30vh;
+  }
+  .container #about, .container #projects, .container #publications, .container #moodboard, .container #contact {
+    overflow: auto;
   }
   .container #publications {
-    font-size: 2vh;
+    font-size: 1.5vh;
+  }
+  .container #publications .year ul {
+    padding-left: 0px;
+    list-style-type: none;
+  }
+  .container #publications .year ul li {
+    margin: 20px 0 20px 0;
   }
 }/*# sourceMappingURL=style.css.map */

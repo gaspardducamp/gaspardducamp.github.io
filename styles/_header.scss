@@ -25,6 +25,10 @@ header {
         li > a {
             text-decoration: none;
             font-size: 1em;
+
+            br {
+                display: none;
+            }
         }
     }
 
@@ -35,7 +39,7 @@ header {
         justify-content: flex-end;
         font-family: Times;
         font-size: 1.5em;
-        letter-spacing: -1px;
+        //letter-spacing: -1px;
         text-decoration: none;
         padding-right:40px;
         height: 30px;
@@ -59,6 +63,10 @@ header {
 
             li > a {
                 font-size: 1em;
+
+                br {
+                    display: inline;
+                }
             }
         }
 
