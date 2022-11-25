@@ -16,13 +16,14 @@ header ul {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
-  letter-spacing: 3px;
-  font-family: monospace;
   list-style-type: none;
   height: 30px;
   align-items: center;
 }
 header ul li > a {
+  letter-spacing: 2px;
+  font-family: monospace;
+  font-weight: 600;
   text-decoration: none;
   font-size: 1em;
 }
@@ -41,10 +42,21 @@ header .logo {
   height: 30px;
   align-items: center;
   font-family: "Azeret Mono";
+  font-weight: 900;
 }
 header .logo #logo-short {
   content: "GD";
   display: none;
+}
+header .logo #logo-text {
+  transition: all 0.3s ease-out;
+  background: linear-gradient(to right, rgb(67, 81, 205), rgb(69, 214, 202));
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+header .logo #logo-text:hover {
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in;
 }
 
 @media screen and (max-width: 1024px) {
@@ -114,11 +126,13 @@ header .logo #logo-short {
 }
 .cards .card .content .content-box .card-title {
   color: #000;
-  letter-spacing: 1px;
   font-weight: 500;
   font-size: 1.2em;
   margin: 10px 0 5px;
-  line-height: 1em;
+  transition: all 0.3s ease-out;
+  background: linear-gradient(to right, rgb(67, 81, 205), rgb(69, 214, 202));
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .cards .card .content .content-box .card-date {
   font-size: 0.9em;
@@ -133,6 +147,10 @@ header .logo #logo-short {
 }
 .cards .card:hover .content {
   transform: translateY(-20px);
+}
+.cards .card:hover .card-title {
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in;
 }
 .cards .card:hover .card-job {
   transform: translateY(0px);

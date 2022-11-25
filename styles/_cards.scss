@@ -43,11 +43,15 @@
                 
                 .card-title {
                     color: #000;
-                    letter-spacing: 1px;
+                    //letter-spacing: 1px;
+                    //font-family: 'Azeret Mono';
                     font-weight: 500;
                     font-size: 1.2em;
                     margin: 10px 0 5px;
-                    line-height: 1em;
+                    //line-height: 1em;
+                    transition: all 0.3s ease-out;
+                    background: linear-gradient(to right, $color-left, $color-right);
+                    background-clip: text;
                 }
 
                 .card-date {
@@ -69,6 +73,11 @@
 
             .content{
                 transform: translateY(-20px);
+            }
+
+            .card-title {
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in;
             }
 
             .card-job{
