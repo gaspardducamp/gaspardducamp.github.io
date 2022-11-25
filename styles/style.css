@@ -183,7 +183,12 @@ header .logo #logo-text:hover {
 }
 @media (orientation: landscape) {
   #homescreen img {
-    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
