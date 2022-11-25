@@ -215,9 +215,9 @@ html, body {
 @media screen and (max-width: 1024px) {
   .container > div {
     width: 90%;
-  }
-  .container #about, .container #projects, .container #publications, .container #moodboard, .container #contact {
-    overflow: auto;
+    height: 100%;
+    padding-top: 64px;
+    margin-bottom: 100px;
   }
   .container #publications {
     font-size: 1.5vh;
