@@ -6,7 +6,10 @@
 
     @media (orientation: portrait) {
         img {
-            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            height: 100vh;
+            overflow: hidden;
         }
     }
 

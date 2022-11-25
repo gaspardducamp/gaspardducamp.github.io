@@ -36,10 +36,16 @@ html, body {
     #publications {
         font-size: 20px;
 
+        #pubs {
+            padding-left: 0px;
+        }
+
         .year {
             list-style-type: none;
 
             .year_number {
+                display: block;
+                margin: 10px 0 10px 0;
                 text-align: center;
                 font-weight: bold;
             }
@@ -49,5 +55,17 @@ html, body {
     .authors {
         font-weight: bold;
     }
+}
 
+@media screen and (max-width: 1024px) {
+    .container {
+        >* {
+            width: 90%;
+            padding-top: 30vh;
+        }
+
+        #publications {
+            font-size: 2vh;
+        }
+    }
 }
